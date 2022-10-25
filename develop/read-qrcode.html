@@ -15,6 +15,10 @@
       if (decodedResult.result.format.formatName=='DATA_MATRIX') {
 
         const GS = String.fromCharCode(29);
+        const RS = String.fromCharCode(30);
+
+        const start = decodedText.indexOf(RS);
+        const end = decodedText.indexOf(RS,start+1);
 
         const DECODE = {
           "1P" : "Part number",
@@ -27,7 +31,7 @@
           "4L" : "Country of origin"
         }
 
-        for (value of decodedText.split(GS)) {
+        for (value of decodedText.substring(start,end).split(GS)) {
           // console.log(`Field: ${value}`)
           for (const p in DECODE) {
             if (value.startsWith(p)) {
