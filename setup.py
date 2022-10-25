@@ -35,6 +35,7 @@ setup(
     package_data={
         '': ['*.ttf'],
         '': ['*.html'],
+        '': ['*.js'],
     },
     install_requires=[
         'qrcode',
