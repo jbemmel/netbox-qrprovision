@@ -28,7 +28,7 @@
         }
 
         for (value of decodedText.split(GS)) {
-          console.log(`Field: ${value}`)
+          // console.log(`Field: ${value}`)
           for (const p in DECODE) {
             if (value.startsWith(p)) {
               console.log(`${DECODE[p]}: ${value.slice(p.length)}`)
