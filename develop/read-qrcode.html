@@ -17,11 +17,17 @@
         const GS = String.fromCharCode(29);
 
         const DECODE = {
-          "P1": "Part number",
+          "1P" : "Part number",
+          "2P" : "Revision",
+          "11P": "CLEI data",
+          "1V" : "Manufacturing location",
           "18V": "Company ID",
+          "D"  : "Manufacturing date",
+          "S"  : "Serial number",
+          "4L" : "Country of origin"
         }
 
-        for (value in decodedText.split(GS)) {
+        for (value of decodedText.split(GS)) {
           console.log(`Field: ${value}`)
           for (const p in DECODE) {
             if (value.startsWith(p)) {
