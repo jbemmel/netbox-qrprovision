@@ -12,6 +12,25 @@
       console.log(`Scan result: ${decodedText}`, decodedResult);
 
       html5QrcodeScanner.clear();
+      if (decodedResult.format.formatName=='DATA_MATRIX') {
+
+        const GS = String.fromCharCode(29);
+
+        const DECODE = {
+          "P1": "Part number",
+          "18V": "Company ID",
+        }
+
+        for (value in decodedText.split(GS)) {
+          console.log(`Field: ${value}`)
+          for (const p in DECODE) {
+            if (value.startsWith(p)) {
+              console.log(`${DECODE[p]}: ${value.slice(p.length)}`)
+              break;
+            }
+          }
+        }
+      }
   }
 
   var html5QrcodeScanner = new Html5QrcodeScanner(
