@@ -12,7 +12,7 @@
       console.log(`Scan result: ${decodedText}`, decodedResult);
 
       html5QrcodeScanner.clear();
-      if (decodedResult.format.formatName=='DATA_MATRIX') {
+      if (decodedResult.result.format.formatName=='DATA_MATRIX') {
 
         const GS = String.fromCharCode(29);
 
