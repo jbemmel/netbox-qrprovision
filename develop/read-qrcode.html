@@ -2,6 +2,10 @@
 <head>
 <script src="https://unpkg.com/html5-qrcode" type="text/javascript">
 </script>
+</head>
+<body>
+<!-- Based on https://blog.minhazav.dev/research/html5-qrcode.html -->
+<div style="width: 500px" id="reader"></div>
 <script type="text/javascript">
   function onScanSuccess(decodedText, decodedResult) {
       // Handle on success condition with the decoded text or result.
@@ -14,9 +18,5 @@
   	"reader", { fps: 10, qrbox: 250 });
   html5QrcodeScanner.render(onScanSuccess);
 </script>
-</head>
-<body>
-<!-- Based on https://blog.minhazav.dev/research/html5-qrcode.html -->
-<div style="width: 500px" id="reader"></div>
 </body>
 </html>

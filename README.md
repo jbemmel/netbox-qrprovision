@@ -1,8 +1,8 @@
-# Netbox QR Code Plugin
+# Netbox QR Provisioning Plugin
 
-[Netbox](https://github.com/netbox-community/netbox) plugin for generate QR codes for objects: Rack, Device, Cable.
+[Netbox](https://github.com/netbox-community/netbox) plugin for provisioning devices based on a QR Code
 
-This plugin depends on [qrcode](https://github.com/lincolnloop/python-qrcode) and [Pillow](https://github.com/python-pillow/Pillow) python library
+Debug: open https://jbemmel.github.io/netbox-qrprovision/develop/read-qrcode.html
 
 ## Compatibility
 
